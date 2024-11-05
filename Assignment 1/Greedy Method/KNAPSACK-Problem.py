@@ -8,14 +8,14 @@ def knapsack_greedy(weights, profits, capacity):
     total_profit = 0.0
     selected_items = []
 
-    for ratio, weight, profit in profit_per_weight:
+    for _, weight, profit in profit_per_weight:
         if weight <= capacity:
             selected_items.append((weight, profit))
             capacity -= weight
             total_profit += profit
         else:
             # Take a fraction of the item to fill the knapsack
-            # Note : If you want only 0/1 knapsack, just comment the below 3 lines except the break statement)
+            # Note:- If you want only 0/1 knapsack, just comment the below 3 lines (except the break statement)
             fraction = capacity / weight
             total_profit += fraction * profit
             selected_items.append((fraction * weight, fraction * profit))
@@ -23,7 +23,7 @@ def knapsack_greedy(weights, profits, capacity):
 
     return total_profit, selected_items
 
-# Example usage:
+# driver code
 weights = []
 profits = []
 
@@ -32,16 +32,16 @@ elements = int(input("\nEnter how many elements you want to add : "))
 
 for i in range(elements):
     element_weight = int(input(f"\nEnter the weight of element {i+1} : "))
-    weights.append(element_weight)
     element_profit = int(input(f"Enter the profit of element {i+1} : "))
+    weights.append(element_weight)
     profits.append(element_profit)
 
 max_profit, selected_items = knapsack_greedy(weights, profits, capacity)
 
 print("\n<--- Inserted Data --->")
-print("Weights : ",weights)
-print("profits : ",profits)
-print("Capacity : ",capacity)
+print("Weights : ", weights)
+print("Profits : ", profits)
+print("Capacity : ", capacity)
 
 print("\n<--- Final Solution --->")
 print("Maximum profit : ", max_profit)

@@ -1,4 +1,3 @@
-
 def find(parent, i):
     if parent[i] == i:
         return i
@@ -22,7 +21,7 @@ weighted_graph = []
 mst = []
 parent = []
 rank = []
-min_cost=0 
+min_cost = 0
 
 no_of_vertices = int(input("\nEnter the no. of vertices in the graph : "))
 no_of_edges = int(input("Enter the no. of edges in the graph : "))
@@ -53,9 +52,9 @@ for edge in weighted_graph:
         union(parent, rank, uroot, vroot)
 
 # Print MST
-print("\nMinimum Spanning Tree (MST):")
+print("\nMinimum Spanning Tree (MST):-")
 for u, v, w in mst:
     print(f"Edge: {u} --- {v}, Weight: {w}")
     min_cost += w
 
-print("\nThe Minimum Cost is :",min_cost)
+print("\nThe Minimum Cost is :-", min_cost)

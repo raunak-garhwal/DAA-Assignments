@@ -17,8 +17,8 @@ def printMatrix(matrix):
     print()
 
 def isPowerOfTwo(n):
-    """Checks if a number is a power of two."""
-    return (n & (n - 1) == 0) and n != 0
+    """Checks if a number is a power of 2."""
+    return (n & (n-1) == 0) and n != 0
 
 def add_matrix(A, B):
     """Adds two matrices."""
@@ -75,11 +75,13 @@ def strassen(A, B):
 # Input matrix size and validate power of two
 n = int(input("\nEnter the order of matrix :- "))
 while not isPowerOfTwo(n):
-    print(f"{n} is not a power of 2. Please enter a power of 2.")
+    print(f"{n} is not a power of 2. Please enter the order of matrix in a power of 2.")
     n = int(input("Enter the order of matrix :- "))
 
 # Create matrices A and B
+print("\nEnter data for Matrix A :-")
 A = createMatrix(n)
+print("\nEnter data for Matrix B :-")
 B = createMatrix(n)
 
 # Display matrices

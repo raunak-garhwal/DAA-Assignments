@@ -1,14 +1,9 @@
-print("\n<---N-Queen Problem--->")
-n = int(input("\nEnter the value of n : "))
-
 # Function to print the matrix with solution number
 def printMatrix(matrix, solution_number):
     print(f"\nSolution {solution_number}:")
     for row in matrix:
-        for element in row:
-            print(element, end=" ")
-        print()
-
+        print(" ".join(row))
+    
 # Function to check if placing a queen at (row, col) is safe
 def isSafe(matrix, row, col):
     # Check this column on the upper side
@@ -54,6 +49,9 @@ def solveNQueen(matrix, row, solution_count):
     return res
 
 # Driver code
+print("\n<---N-Queen Problem--->")
+n = int(input("\nEnter the value of n : "))
+
 matrix = [['*' for _ in range(n)] for _ in range(n)]
 solution_count = [0]  # To keep track of the number of solutions
 
@@ -62,7 +60,6 @@ if not solveNQueen(matrix, 0, solution_count):
     print("\nNo solution exists for the given value of n.")
 else:
     print(f"\nTotal solutions: {solution_count[0]}")
-
 
 # No of Solutions :-
 #  n --> solutions

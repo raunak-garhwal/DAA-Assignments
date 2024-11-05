@@ -1,4 +1,3 @@
-
 def tsp(dist):
     n = len(dist)
     dp = [[None] * n for _ in range(1 << n)]
@@ -27,9 +26,7 @@ def tsp(dist):
 
 # Example usage:
 dist_matrix = []
-
 order = int(input("Enter order of Matrix : "))
-
 print("Add elements into matrix :" )
 
 for i in range(order):

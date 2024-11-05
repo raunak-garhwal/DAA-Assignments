@@ -1,4 +1,3 @@
-
 def tsp(dist_matrix):
     n = len(dist_matrix)
     # DP table to store the minimum cost to reach each subset of cities ending at a specific city

@@ -40,13 +40,13 @@ num_jobs = int(input("\nEnter the number of jobs : "))
 # Get details for each job from the user
 for i in range(num_jobs):
     job_id = input(f"\nEnter job ID for job {i+1} : ")
-    profit = int(input(f"Enter profit for {job_id} : "))
     deadline = int(input(f"Enter deadline for {job_id} : "))
+    profit = int(input(f"Enter profit for {job_id} : "))
     jobs.append(Job(job_id, deadline, profit))
 
 # Get the job sequence and total profit
 job_sequence, total_profit = job_scheduling(jobs)
 
 # Print the result
-print(f"\nMaximum profit sequence of jobs: {' --> '.join(job_sequence)}")
+print(f"\nMaximum profit sequence of jobs: {" --> ".join(job_sequence)}")
 print(f"Total Profit: {total_profit}")
